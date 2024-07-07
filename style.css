@@ -1,0 +1,166 @@
+/* Fichier: style.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(90deg, #007FFF, #FF2400); /* Dégradé azure à écarlate */
+    color: white;
+    padding: 45px 0; /* Augmenté pour équilibrer avec la taille du texte */
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    max-width: 400px; /* Taille augmentée du logo */
+    vertical-align: middle;
+    margin-left: 20px;
+    float: right; /* Place le logo à droite */
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 3em; /* Augmenté pour plus de visibilité */
+    color: #FF2400; /* Couleur écarlate pour le titre principal */
+}
+
+nav h3 {
+    margin: 0;
+    font-size: 1.5em; /* Augmenté pour plus de visibilité */
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #ddd;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 15px; /* Augmenté pour plus d'espace autour du texte */
+    border-radius: 5px;
+    background: linear-gradient(90deg, #007FFF, #FF2400);
+    background-size: 200% 200%;
+    animation: gradientMove 4s ease infinite;
+    text-align: center;
+    font-size: 1.2em; /* Augmenté pour plus de visibilité */
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h2 {
+    color: #007FFF; /* Azure */
+    font-size: 2em; /* Augmenté pour plus de visibilité */
+}
+
+h3, h4 {
+    color: #007FFF; /* Azure */
+    font-size: 1.5em; /* Augmenté pour plus de visibilité */
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.2em; /* Augmenté pour plus de visibilité */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+    position: relative; /* Changement de absolute à relative */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Ajout de la transition lisse pour les ancres */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Styles pour les nouveaux boutons */
+.bouton-images, .bouton-coeur {
+    background: linear-gradient(90deg, #007FFF, #FF2400);
+    background-size: 200% 200%;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1em; /* Ajuste la taille de police si nécessaire */
+    transition: all 0.3s ease;
+}
+
+.bouton-images:hover {
+    background-position: right center; /* Animation du dégradé */
+}
+
+.bouton-coeur {
+    background: #fff; /* Fond blanc par défaut */
+    color: #FF2400; /* Couleur rouge pour le cœur */
+    position: relative;
+    font-size: 1.4em; /* Ajuste la taille du cœur */
+    transition: background 0.3s ease, color 0.3s ease; /* Animation de couleur */
+}
+
+.bouton-coeur:hover {
+    background: #FF2400; /* Fond rouge au survol */
+    color: white; /* Texte blanc au survol */
+}
+
+.bouton-coeur.active {
+    background: linear-gradient(90deg, #007FFF, #FF2400);
+    background-size: 200% 200%;
+    color: white; /* Texte blanc lorsque actif */
+    animation: gradientMove 4s ease infinite; /* Animation du dégradé quand actif */
+}
+
+/* Ajustement pour le titre "Accueil" */
+#accueil {
+    clear: both; /* Évite que le titre "Accueil" ne s'aligne avec le logo */
+}
+
+.like-count {
+    font-size: 1.5em; /* Ajuste la taille selon tes préférences */
+    margin-left: 5px; /* Optionnel : ajoute de l'espace à gauche du compteur */
+}
+
+.galerie {
+    display: none;
+    margin-top: 10px;
+}
+
+.galerie img {
+    max-width: 200px;
+    margin-right: 10px;
+}

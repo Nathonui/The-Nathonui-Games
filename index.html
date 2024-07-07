@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Nathonui Games</title>
+    <link rel="shortcut icon" href="./Images/LogoMiniature.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="titre-principal">The Nathonui Games</h1>
+            <h3>Comme un oasis au milieu du désert !</h3>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <!-- Accueil + Sommaire -->
+            <h2>Sommaire</h2>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#boutique">Boutique</a></li>
+                <li><a href="#presentation">Présentations</a></li>
+            </ul>
+        </section>
+
+        <section id="accueil">
+            <h2>Accueil</h2>
+            <p>
+                <strong>The Nathonui Games</strong> est un groupe de créateur jeux vidéo ayant développé des titres comme
+                <strong>Cube Deluxe : Train Rider</strong> en 2023 et <strong>Le Village Maudit</strong> en 2024.
+                Ces jeux sont uniques, remplis de diversité et d'amusement !
+            </p>
+        </section>
+
+        <section id="boutique">
+            <h2>Boutique <img src="./Images/Logo.png" alt="Logo de l'entreprise" class="logo"></h2>
+            <div class="jeu">
+                <div class="infos">
+                    <h3>Cube Deluxe : Train Rider (2023)</h3>
+                    <p>
+                        Dans ce jeu, vous incarnez Cubi, un simple cube. Ce jeu de plateforme en 2D est plus difficile qu'il n'y paraît.
+                        Vous devrez parcourir des niveaux de styles variés et sauter sur les débris d'un train échoué pour terminer votre
+                        long périple semé d'embûches, en résolvant des énigmes et en relevant des défis palpitants !
+                    </p>
+                    <h4>Prix : Gratuit</h4>
+                </div>
+                <div class="actions">
+                    <button class="bouton-images" onclick="toggleGallery('galerie1')">Images</button>
+                    <button class="bouton-coeur" onclick="toggleLike(this)">❤</button>
+                    <span class="like-count">0</span>
+                </div>
+                <div id="galerie1" class="galerie">
+                    <img src="./Images/ImageCD1.PNG" alt="Image 1 du jeu">
+                    <img src="./Images/ImageCD2.PNG" alt="Image 2 du jeu">
+                </div>
+            </div>
+
+            <div class="jeu">
+                <div class="infos">
+                    <h3>Le Village Maudit (2024)</h3>
+                    <p>
+                        Dans ce sombre et mystérieux jeu d'aventure en 3D, vous incarnez un chevalier,
+                        ancien habitant d'un village maudit il y a dix ans par une malédiction qui décima la moitié de la population.
+                        Vous revenez pour vous venger et partir à la recherche des cinq clés divines
+                        afin de lever ce terrible sort qui s'abat actuellement sur cet endroit...
+                    </p>
+                    <h4>Prix : Gratuit</h4>
+                </div>
+                <div class="actions">
+                    <button class="bouton-images" onclick="toggleGallery('galerie2')">Images</button>
+                    <button class="bouton-coeur" onclick="toggleLike(this)">❤</button>
+                    <span class="like-count">0</span>
+                </div>
+                <div id="galerie2" class="galerie">
+                    <img src="./Images/ImageVM1.PNG" alt="Image 1 du jeu">
+                    <img src="./Images/ImageVM2.PNG" alt="Image 2 du jeu">
+                    <img src="./Images/ImageVM3.PNG" alt="Image 3 du jeu">
+                </div>
+            </div>
+        </section>
+
+        <section id="presentation">
+            <h2>Présitions</h2>
+            <div>
+                <h3>
+                    Pour obtenir un jeu, veuillez envoyer un email à l'adresse : [email].
+                    Et le jeu vous sera envoyé !
+                </h3>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 The Nathonui Games. Tous droits réservés.
+    </footer>
+
+    <script>
+        function toggleGallery(id) {
+            var gallery = document.getElementById(id);
+            if (gallery.style.display === 'none' || gallery.style.display === '') {
+                gallery.style.display = 'block';
+            } else {
+                gallery.style.display = 'none';
+            }
+        }
+
+        function toggleLike(button) {
+            var countSpan = button.nextElementSibling;
+            var count = parseInt(countSpan.textContent);
+
+            if (button.classList.contains('active')) {
+                button.classList.remove('active');
+                count--;
+            } else {
+                button.classList.add('active');
+                count++;
+            }
+
+            countSpan.textContent = count;
+        }
+    </script>
+</body>
+</html>
